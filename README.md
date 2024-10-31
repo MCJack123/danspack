@@ -24,3 +24,4 @@ The default configuration will compress Lua files with Luz, and all other files 
 ## Notes
 - Programs are run in the root directory, which may break relative paths. Make sure to use absolute paths anywhere you need to load files.
 - The filesystem overlay is very limited. Writing to virtual files is not supported, and some operations that write to the filesystem may not even attempt to access the virtual filesystem. In addition, virtual files will always override real files.
+- Since it overwrites the global filesystem, programs running in other multishell tabs may experience issues. Avoid running programs made with danspack alongside other programs.
